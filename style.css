@@ -1,0 +1,264 @@
+/* =========================
+    BACKGROUND (Sky Cycle)
+========================= */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    color: #333;
+
+    background: linear-gradient(-45deg,
+        #000000,
+        #1a2a6c,
+        #4facfe,
+        #7b2ff7
+    );
+
+    background-size: 400% 400%;
+    animation: skyCycle 18s ease infinite;
+
+    animation: pageLoad 0.5s ease;
+}
+
+@keyframes skyCycle {
+    0%   { background-position: 0% 50%; }
+    25%  { background-position: 50% 50%; }
+    50%  { background-position: 100% 50%; }
+    75%  { background-position: 50% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* =========================
+   PAGE LOAD ANIMATION
+========================= */
+
+@keyframes pageLoad {
+    from {
+        opacity: 0;
+        transform: scale(1.02);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* =========================
+   HEADER + NAV
+========================= */
+
+header {
+    background: rgba(30, 42, 56, 0.85);
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    color: white;
+    margin: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #4facfe;
+}
+
+/* =========================
+   MAIN BOX
+========================= */
+
+.info {
+    padding: 30px;
+    max-width: 900px;
+    margin: 30px auto;
+
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+
+    animation: fadeUpSafe 0.8s ease forwards;
+}
+
+/* =========================
+   CARDS
+========================= */
+
+.card {
+    background: white;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 12px;
+
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background: white;
+    color: #1e2a38;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: bold;
+
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    transform: scale(1.07);
+    background: #1e2a38;
+    color: white;
+}
+
+/* =========================
+   FORMS
+========================= */
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: #4facfe;
+    box-shadow: 0 0 10px rgba(79,172,254,0.4);
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background: rgba(30, 42, 56, 0.85);
+    color: white;
+    margin-top: 40px;
+}
+
+/* =========================
+   SAFE FADE ANIMATION
+========================= */
+
+@keyframes fadeUpSafe {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =========================
+   BUTTON WRAPPER FIX
+========================= */
+
+.button-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* =========================
+   FLYING PLANE
+========================= */
+
+.plane {
+    position: fixed;
+    top: 15%;
+    left: -120px;
+    font-size: 50px;
+    z-index: 9999;
+
+    animation: flyAcross 10s linear infinite;
+    pointer-events: none;
+    opacity: 0.9;
+}
+
+@keyframes flyAcross {
+    0% {
+        left: -120px;
+        transform: translateY(0px);
+    }
+    25% { transform: translateY(-20px); }
+    50% { transform: translateY(10px); }
+    75% { transform: translateY(-15px); }
+    100% {
+        left: 110%;
+        transform: translateY(0px);
+    }
+}
+
+/* =========================
+   BOARDING PASS
+========================= */
+
+.boarding .card {
+    animation: popIn 0.8s ease;
+}
+
+@keyframes popIn {
+    from {
+        transform: scale(0.85);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.fade-note {
+    margin-top: 15px;
+    animation: fadeUpSafe 1.5s ease;
+}
+
+/* =========================
+   TICKET ANIMATION
+========================= */
+
+.ticket-card {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    max-width: 400px;
+    margin: 30px auto;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+
+    transform: translateY(50px);
+    opacity: 0;
+    animation: slideInTicket 1s ease forwards;
+}
+
+@keyframes slideInTicket {
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

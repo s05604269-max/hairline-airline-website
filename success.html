@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Confirmation - Hairline Airline</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body data-page="success">
+
+<header>
+    <div class="header-row">
+        <a class="brand-link" href="index.html" aria-label="Hairline Airline home page">
+            <span class="logo-tile">
+                <img class="logo" src="2bd585c2-60a3-4d4d-8e11-52927cf109ce-removebg-preview.png" alt="Hairline Airline logo">
+            </span>
+            <span class="brand-copy">
+                <h1>Booking Confirmation</h1>
+            </span>
+        </a>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="routes.html">Routes</a>
+            <a href="fleet.html">Fleet</a>
+            <a href="booking.html">Booking</a>
+            <a href="contact.html">Contact</a>
+            <a href="giveaway.html">Giveaway</a>
+        </nav>
+    </div>
+</header>
+
+<section class="info ticket">
+
+    <span class="eyebrow">Booking confirmation</span>
+    <h2>Review your booking</h2>
+
+    <div class="ticket-card">
+        <h2>✈️ Hairline Airline</h2>
+        <p><b>Status:</b> AWAITING PAYMENT</p>
+        <p><b>Route:</b> <span id="summary-route">Loading...</span></p>
+        <p><b>Name:</b> <span id="summary-name">Loading...</span></p>
+        <p><b>Date:</b> <span id="summary-date">Loading...</span></p>
+        <p><b>Passengers:</b> <span id="summary-passengers">Loading...</span></p>
+        <p><b>Class:</b> <span id="summary-class">Loading...</span></p>
+    </div>
+
+    <div class="confirmation-actions">
+        <button class="btn" type="button" id="proceed-payment">Proceed</button>
+        <a class="btn btn-secondary" href="bookings.html">Go Back to Bookings</a>
+    </div>
+
+    <div class="payment-panel" id="payment-panel" hidden>
+        <h3>Payment details</h3>
+        <p>Fare for this booking: <strong id="payment-amount">$0</strong></p>
+
+        <form id="payment-form">
+            <label for="card-name">Cardholder name</label><br>
+            <input type="text" id="card-name" name="cardName" placeholder="Fake cardholder name" required><br><br>
+
+            <label for="card-number">Card number</label><br>
+            <input type="text" id="card-number" name="cardNumber" placeholder="1234 5678 9012 3456" maxlength="19" required><br><br>
+
+            <label for="card-expiry">Expiry date</label><br>
+            <input type="text" id="card-expiry" name="cardExpiry" placeholder="MM/YY" maxlength="5" required><br><br>
+
+            <label for="card-cvv">CVV</label><br>
+            <input type="text" id="card-cvv" name="cardCvv" placeholder="123" maxlength="4" required><br><br>
+
+            <button type="submit" class="btn">Confirm Payment</button>
+        </form>
+    </div>
+
+    <div class="payment-result" id="payment-result" hidden>
+        <h3>Confirmed</h3>
+        <p id="payment-result-text"></p>
+        <div class="button-container">
+            <a class="btn" href="bookings.html">View Saved Bookings</a>
+            <a class="btn btn-secondary" href="index.html">Back to Home</a>
+        </div>
+    </div>
+
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>

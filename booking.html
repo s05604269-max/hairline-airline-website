@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking - Hairline Airline</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body data-page="booking">
+
+<header>
+    <div class="header-row">
+        <a class="brand-link" href="index.html" aria-label="Hairline Airline home page">
+            <span class="logo-tile">
+                <img class="logo" src="2bd585c2-60a3-4d4d-8e11-52927cf109ce-removebg-preview.png" alt="Hairline Airline logo">
+            </span>
+            <span class="brand-copy">
+                <h1>Book a Flight 🎫</h1>
+            </span>
+        </a>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="routes.html">Routes</a>
+            <a href="fleet.html">Fleet</a>
+            <a href="booking.html">Booking</a>
+            <a href="contact.html">Contact</a>
+            <a href="giveaway.html">Giveaway</a>
+        </nav>
+    </div>
+</header>
+
+<section class="info">
+
+    <span class="eyebrow">Book smarter</span>
+    <h2>Flight Booking</h2>
+    <p>Choose one of the preset routes below, then complete the remaining details. Your booking will be saved on this device so you can review it later.</p>
+
+    <div class="booking-layout">
+        <form id="booking-form">
+            <label for="route">Route</label><br>
+            <select id="route" name="route" required>
+                <option value="" selected disabled>Select a route</option>
+                <option value="london-dubai">Sydney Airport to Dubai</option>
+                <option value="paris-rome">Sydney Airport to Paris</option>
+                <option value="newyork-toronto">Sydney Airport to New York</option>
+                <option value="dubai-london">Sydney Airport to London</option>
+                <option value="rome-paris">Sydney Airport to Rome</option>
+                <option value="toronto-newyork">Sydney Airport to Toronto</option>
+            </select><br><br>
+
+            <div class="booking-summary" id="route-summary">
+                <h3>Route preview</h3>
+                <p>Select a route to see the flight details here.</p>
+            </div>
+
+            <label for="name">Name</label><br>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <label for="email">Email</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="date">Date</label><br>
+            <input type="date" id="date" name="date" required><br><br>
+
+            <label for="passengers">Passengers</label><br>
+            <select id="passengers" name="passengers" required>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+            </select><br><br>
+
+            <label for="class">Class</label><br>
+            <select id="class" name="class" required>
+                <option>Economy</option>
+                <option>Business</option>
+                <option>First Class</option>
+            </select><br><br>
+
+            <label for="notes">Special requests</label><br>
+            <textarea id="notes" name="notes" rows="4" placeholder="Optional notes for your trip"></textarea><br><br>
+
+            <button type="submit" class="btn">Book Flight</button>
+        </form>
+
+        <div class="booking-side">
+            <div class="booking-note">
+                <h3>How it works</h3>
+                <p>Pick a route, choose your date and travel class, then submit. Your booking gets stored locally and added to the saved bookings list on this device.</p>
+            </div>
+
+            <div class="booking-note">
+                <h3>Saved bookings</h3>
+                <p>Open the local booking archive to review everything you’ve collected on this browser.</p>
+                <div class="button-container">
+                    <a class="btn" href="bookings.html">View Saved Bookings</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>

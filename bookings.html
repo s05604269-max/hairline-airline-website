@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saved Bookings - Hairline Airline</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="bookings">
+
+<header>
+    <div class="header-row">
+        <a class="brand-link" href="index.html" aria-label="Hairline Airline home page">
+            <span class="logo-tile">
+                <img class="logo" src="2bd585c2-60a3-4d4d-8e11-52927cf109ce-removebg-preview.png" alt="Hairline Airline logo">
+            </span>
+            <span class="brand-copy">
+                <h1>Saved Bookings</h1>
+            </span>
+        </a>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="routes.html">Routes</a>
+            <a href="fleet.html">Fleet</a>
+            <a href="booking.html">Booking</a>
+            <a href="contact.html">Contact</a>
+            <a href="giveaway.html">Giveaway</a>
+        </nav>
+    </div>
+</header>
+
+<section class="info">
+    <span class="eyebrow">Local archive</span>
+    <h2>Bookings saved on this device</h2>
+    <p>This page shows bookings stored in your browser on this device. If you clear browser data or open the site on another device, the saved list will not appear there.</p>
+
+    <div class="booking-admin-actions">
+        <button class="btn" type="button" id="clear-bookings">Clear Saved Bookings</button>
+    </div>
+
+    <div class="booking-admin-list" id="booking-list"></div>
+</section>
+
+<footer>
+    <p>© 2026 Hairline Airline</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
